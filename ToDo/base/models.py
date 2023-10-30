@@ -6,6 +6,8 @@ class ToDo(models.Model):
     name = models.CharField(max_length=200) #this charfield only allows database to store string .
     description =models.TextField() #same thing as charfild but very high length
     status =models.CharField(max_length=50,choices=status_list) #satuts_list is passed to choices
+    def __str__(self): #this returns the name which wriiten in line  6....but this is not complsory
+        return self.name
 
 
 
