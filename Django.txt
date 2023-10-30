@@ -1,0 +1,19 @@
+Django - it is a web framework for python.
+*it is a tool to biuld website.. 
+* it is for both backend or fullstack devlopment.........................l``
+
+#fullstack development in Django
+-it is based on MVT architecture. (model,view,template)
+-model -stores data 
+-view-controls data and redenders the templates
+-templates - group of html ,css,and javascript,used to visualize data.
+
+#backend development in Django
+-django rest framework is used
+ to make API
+-API -it is the birdge of communication between frontend and backend.
+            -way of communication  is through -JSON
+            -serializing
+hello world
+
+hey i havr
