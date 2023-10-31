@@ -17,8 +17,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from base.views import home
+from base.views import create
 
 urlpatterns = [
     path('rajiv_website/', admin.site.urls),
-    path("homepage",home) #needed to add new url
+    path("homepage",home),#needed to add new url
+    path("create",create),
 ]
