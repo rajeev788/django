@@ -9,27 +9,30 @@
 <title>Create</title>
 </head>
 <body>
-    <h1>create page</h1>
-    <form>
+ {% include 'nav.html' %}
+
+    <form method ="POST">
+      {% csrf_token %}
         <div class="mb-3">
           <label for="name" class="form-label">Name</label>
-          <input type="text" class="form-control" id="name">
+          <input type="text" class="form-control" id="name" name="name">
           </div>
           <div class="mb-3">
             <label for="description"> Description </label>
-            <textarea class="form-control" id="description"></textarea>
+            <textarea class="form-control" id="description" name="description"></textarea>
             </div>
             <div class="mb-3">
                 <label for="status" class="form-label">status</label>
-                <select id="status" class="form-select">
-                  <option>done</option>
-                  <option>in progress</option>
-                  <option>not done</option>
+                <select id="status" class="form-select" name="status">
+                  <option value="Done">Done</option>
+                  <option value="In progress">In progress</option>
+                  <option value="Not done">Not done</option>
                 </select>
               </div>
         
-       
+      
         <button type="submit" class="btn btn-primary">Submit</button>
+  
       </form>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>

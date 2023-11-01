@@ -21,6 +21,6 @@ from base.views import create
 
 urlpatterns = [
     path('rajiv_website/', admin.site.urls),
-    path("homepage",home),#needed to add new url
-    path("create",create),
+    path("homepage",home ,name="home") ,#needed to add new url
+    path("create",create, name="create"),
 ]
