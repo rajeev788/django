@@ -18,9 +18,15 @@ from django.contrib import admin
 from django.urls import path
 from base.views import home
 from base.views import create
+from base.views import edit
+from base.views import delete
+
 
 urlpatterns = [
     path('rajiv_website/', admin.site.urls),
-    path("homepage",home ,name="home") ,#needed to add new url
+    path("homepage",home,name="home") ,#needed to add new url
     path("create",create, name="create"),
+    path("edit/<int:pk>/",edit, name="edit"),#<int:pk>/ this passes the id, value of the row form table
+    path("delete/<int:pk>/",delete, name="delete"), 
 ]
+
