@@ -20,6 +20,7 @@ from base.views import home
 from base.views import create
 from base.views import edit
 from base.views import delete
+from base.views import delete_all
 
 
 urlpatterns = [
@@ -28,5 +29,6 @@ urlpatterns = [
     path("create",create, name="create"),
     path("edit/<int:pk>/",edit, name="edit"),#<int:pk>/ this passes the id, value of the row form table
     path("delete/<int:pk>/",delete, name="delete"), 
+    path("delete_all/",delete_all, name="delete_all"), 
 ]
 

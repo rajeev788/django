@@ -28,8 +28,11 @@
                     <td>{{i.description}}</td>
                     <td>{{i.status}}</td>
                     <td><a href="{% url 'edit' pk=i.id %}"><button type="button" class="btn btn-warning">Edit</button></a> <a href="{% url 'delete' pk=i.id %}"><button type="button" class="btn btn-danger">Delete</button></a></td>
+                    
             {% endfor %}
-        </tbody>
+            <a href="{% url 'delete_all' %}"><button type="button" class="btn btn-info">delete_all</button></a> 
+           
+       
     </table>
 
 </body>

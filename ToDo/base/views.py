@@ -36,3 +36,11 @@ def delete(request,pk):
     todo=ToDo.objects.get(id=pk)
     todo.delete() #thhis delete is also a method
     return redirect('home')
+
+def delete_all(request):
+    todo=ToDo.objects.all()
+    todo.delete()
+
+    return redirect('home')
+    '''
+    render(request, 'index.html') this can also be used'''
